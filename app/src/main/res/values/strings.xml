@@ -7,6 +7,11 @@
     <string name="person">Person</string>
     <string name="device_settings">Device Settings</string>
     <string name="justin">Justin</string>
+    <string name="justin_chipman">Justin Chipman</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="vanilla">Vanilla</string>
+    <string name="strawberry">Strawberry</string>
+    <string name="ok">OK</string>
 
     <string-array name="canadian_provinces_territories">
         <item>Alberta</item>
