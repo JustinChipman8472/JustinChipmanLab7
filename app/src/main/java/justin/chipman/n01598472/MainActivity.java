@@ -1,26 +1,31 @@
 package justin.chipman.n01598472;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.view.Menu;
 import android.view.MenuItem;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity implements NavigationBarView.OnItemSelectedListener {
 
-    NavigationBarView navBar;
+    NavigationBarView bottomNavBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        navBar = findViewById(R.id.bottomNavigationView);
 
-        navBar.setOnItemSelectedListener(this);
-        navBar.setSelectedItemId(R.id.Jusperson);
+
+        bottomNavBar = findViewById(R.id.bottomNavigationView);
+        bottomNavBar.setOnItemSelectedListener(this);
+        bottomNavBar.setSelectedItemId(R.id.Jusperson);
     }
     PersonFragment person = new PersonFragment();
     HomeFragment home = new HomeFragment();
@@ -48,6 +53,28 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
             return true;
         }
         return false;
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        // Handle action bar item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.action_settings) {
+            // Launch device settings
+            Intent intent = new Intent(Settings.ACTION_SETTINGS);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            }
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
 }
