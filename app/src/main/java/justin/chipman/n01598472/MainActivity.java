@@ -25,11 +25,13 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
 
         bottomNavBar = findViewById(R.id.bottomNavigationView);
         bottomNavBar.setOnItemSelectedListener(this);
-        bottomNavBar.setSelectedItemId(R.id.Jusperson);
+        bottomNavBar.setSelectedItemId(R.id.Jushome);
     }
     PersonFragment person = new PersonFragment();
     HomeFragment home = new HomeFragment();
     SettingsFragment settings = new SettingsFragment();
+    JustinFragment justin = new JustinFragment();
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -49,6 +51,12 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
             getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.flFragment, settings)
+                    .commit();
+            return true;
+        } else if (item.getItemId() == R.id.Justin) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.flFragment, justin)
                     .commit();
             return true;
         }
