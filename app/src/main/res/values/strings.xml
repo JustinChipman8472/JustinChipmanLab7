@@ -13,6 +13,8 @@
     <string name="strawberry">Strawberry</string>
     <string name="ok">OK</string>
     <string name="menu">Menu</string>
+    <string name="index">INDEX</string>
+    <string name="province">PROVINCE</string>
 
     <string-array name="canadian_provinces_territories">
         <item>Alberta</item>

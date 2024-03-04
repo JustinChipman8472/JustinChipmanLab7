@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsFragment">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFE0">
 
+    <TextView
+        android:id="@+id/textViewClock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp" />
 
+    <TextView
+        android:id="@+id/textViewProvince"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/province"
+        android:textSize="20sp" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textViewIndex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/index"
+        android:textSize="20sp" />
+</LinearLayout>
