@@ -1,3 +1,4 @@
+// Justin Chipman n01598472
 package justin.chipman.n01598472;
 
 import androidx.annotation.NonNull;
@@ -11,7 +12,7 @@ import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationBarView;
 
-public class MainActivity extends AppCompatActivity implements NavigationBarView.OnItemSelectedListener {
+public class ChipmanActivity7 extends AppCompatActivity implements NavigationBarView.OnItemSelectedListener {
 
     NavigationBarView bottomNavBar;
 

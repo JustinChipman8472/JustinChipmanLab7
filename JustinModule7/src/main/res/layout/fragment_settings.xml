@@ -7,20 +7,20 @@
     android:background="#CBC3E3">
 
     <TextView
-        android:id="@+id/textViewClock"
+        android:id="@+id/JustextViewClock"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/textViewProvince"
+        android:id="@+id/JustextViewProvince"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/province"
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/textViewIndex"
+        android:id="@+id/JustextViewIndex"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/index"

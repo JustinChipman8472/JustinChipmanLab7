@@ -1,3 +1,4 @@
+// Justin Chipman n01598472
 package justin.chipman.n01598472;
 
 import android.os.Bundle;
@@ -30,9 +31,9 @@ public class SettingsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_settings, container, false);
         SharedViewModel model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
-        textViewClock = rootView.findViewById(R.id.textViewClock);
-        textViewProvince = rootView.findViewById(R.id.textViewProvince);
-        textViewIndex = rootView.findViewById(R.id.textViewIndex);
+        textViewClock = rootView.findViewById(R.id.JustextViewClock);
+        textViewProvince = rootView.findViewById(R.id.JustextViewProvince);
+        textViewIndex = rootView.findViewById(R.id.JustextViewIndex);
 
         // Update clock every second
         final Handler handler = new Handler(Looper.getMainLooper());
