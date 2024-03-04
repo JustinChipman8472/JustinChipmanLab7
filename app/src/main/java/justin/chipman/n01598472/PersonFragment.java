@@ -3,6 +3,7 @@ package justin.chipman.n01598472;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,7 +26,7 @@ public class PersonFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_person, container, false);
-
+        SharedViewModel model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
         ListView listView = rootView.findViewById(R.id.JuslistViewProvinces);
         String[] provinces = getResources().getStringArray(R.array.canadian_provinces_territories);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(rootView.getContext(),
@@ -37,7 +38,7 @@ public class PersonFragment extends Fragment {
             String selectedProvince = provinces[position];
             int index = position + 1; // Index starts at 1
 
-            // to do: create the logic to pass data to settings fragment.
+            model.selectProvince(selectedProvince, index);
         });
 
         return rootView;

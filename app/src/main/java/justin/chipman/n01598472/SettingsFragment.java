@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +29,7 @@ public class SettingsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_settings, container, false);
-
+        SharedViewModel model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
         textViewClock = rootView.findViewById(R.id.textViewClock);
         textViewProvince = rootView.findViewById(R.id.textViewProvince);
         textViewIndex = rootView.findViewById(R.id.textViewIndex);
@@ -43,7 +45,13 @@ public class SettingsFragment extends Fragment {
             }
         }, 10);
 
-        // TODO: Retrieve and set the province and index from PersonFragment
+        model.getSelectedProvince().observe(getViewLifecycleOwner(), province -> {
+            textViewProvince.setText(province);
+        });
+
+        model.getSelectedIndex().observe(getViewLifecycleOwner(), index -> {
+            textViewIndex.setText(String.valueOf(index));
+        });
 
         return rootView;
     }
