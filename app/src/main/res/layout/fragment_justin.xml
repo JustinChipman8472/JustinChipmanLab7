@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".JustinFragment"
-    android:background="#FFFF00">
+    android:background="#FFFFA0">
 
     <TextView
-        android:id="@+id/textViewFullName"
+        android:id="@+id/JustextViewFullName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -23,10 +23,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/JusradioGroup"
         android:layout_width="117dp"
         android:layout_height="150dp"
-        android:layout_below="@id/textViewFullName"
+        android:layout_below="@id/JustextViewFullName"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="89dp"
         android:orientation="vertical"
@@ -36,20 +36,20 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
-            android:id="@+id/radioButton1"
+            android:id="@+id/JusradioButton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
             android:text="@string/chocolate" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/JusradioButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/vanilla" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/JusradioButton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/strawberry" />

@@ -40,7 +40,7 @@ public class JustinFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        radioGroup = view.findViewById(R.id.radioGroup);
+        radioGroup = view.findViewById(R.id.JusradioGroup);
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

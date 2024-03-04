@@ -1,7 +1,6 @@
 package justin.chipman.n01598472;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -23,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
 
 
 
-        bottomNavBar = findViewById(R.id.bottomNavigationView);
+        bottomNavBar = findViewById(R.id.JusbottomNavigationView);
         bottomNavBar.setOnItemSelectedListener(this);
         bottomNavBar.setSelectedItemId(R.id.Jushome);
     }
@@ -38,25 +37,25 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
         if (item.getItemId() == R.id.Jusperson) {
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.flFragment, person)
+                    .replace(R.id.JusflFragment, person)
                     .commit();
             return true;
         } else if (item.getItemId() == R.id.Jushome) {
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.flFragment, home)
+                    .replace(R.id.JusflFragment, home)
                     .commit();
             return true;
         } else if (item.getItemId() == R.id.Justsettings) {
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.flFragment, settings)
+                    .replace(R.id.JusflFragment, settings)
                     .commit();
             return true;
         } else if (item.getItemId() == R.id.Justin) {
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.flFragment, justin)
+                    .replace(R.id.JusflFragment, justin)
                     .commit();
             return true;
         }
@@ -73,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
         // Handle action bar item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
+        if (id == R.id.Jusaction_settings) {
             // Launch device settings
             Intent intent = new Intent(Settings.ACTION_SETTINGS);
             if (intent.resolveActivity(getPackageManager()) != null) {

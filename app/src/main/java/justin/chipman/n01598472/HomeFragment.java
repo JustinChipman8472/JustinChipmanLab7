@@ -39,8 +39,8 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        progressBar = view.findViewById(R.id.progressBar);
-        imageButton = view.findViewById(R.id.imageButton);
+        progressBar = view.findViewById(R.id.JusprogressBar);
+        imageButton = view.findViewById(R.id.JusimageButton);
 
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override

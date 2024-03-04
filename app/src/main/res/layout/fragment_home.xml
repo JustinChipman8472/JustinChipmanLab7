@@ -9,23 +9,23 @@
     tools:context=".HomeFragment">
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/JusprogressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="386dp"
         android:layout_height="10dp"
         android:layout_centerInParent="true"
         android:layout_marginBottom="52dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintBottom_toTopOf="@+id/JusimageButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         android:max="5"/>
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/JusimageButton"
         android:layout_width="302dp"
         android:layout_height="292dp"
-        android:layout_below="@id/progressBar"
+        android:layout_below="@id/JusprogressBar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"
         android:src="@drawable/ichigo"
